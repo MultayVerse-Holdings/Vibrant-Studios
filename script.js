@@ -1,5 +1,8 @@
 const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 
+// The repository uses lightweight SVG campaign art so the storefront remains self-contained.
+$$('img[src$=".jpg"]').forEach(img=>{img.src=img.getAttribute('src').replace('.jpg','.svg')});
+
 const state={cart:[]};
 const cartDrawer=$('.cart-drawer');
 const overlay=$('.overlay');
