@@ -1,8 +1,5 @@
 const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 
-// The repository uses lightweight SVG campaign art so the storefront remains self-contained.
-$$('img[src$=".jpg"]').forEach(img=>{img.src=img.getAttribute('src').replace('.jpg','.svg')});
-
 const state={cart:[]};
 const cartDrawer=$('.cart-drawer');
 const overlay=$('.overlay');
@@ -36,15 +33,10 @@ function renderCart(){const qty=state.cart.length;cartCount.textContent=qty;cons
 function flashToast(text='Added to bag'){toast.textContent=text;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1800)}
 $$('.quick-add').forEach(btn=>btn.addEventListener('click',()=>{state.cart.push({name:btn.dataset.name,price:Number(btn.dataset.price)});renderCart();flashToast(`${btn.dataset.name} added`)}));
 
-$$('.filter').forEach(btn=>btn.addEventListener('click',()=>{const filter=btn.dataset.filter;$$('.filter').forEach(b=>b.classList.toggle('active',b===btn));$$('.product-card').forEach(card=>{card.style.display=filter==='all'||card.dataset.category===filter?'':'none'})}));
-
 $$('.product-image-wrap').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();flashToast(`${link.dataset.product} — product page coming soon`)}));
 
-const searchIndex=[{name:'Studio Tee',type:'tee',href:'#shop'},{name:'Core Logo Hoodie',type:'hoodie',href:'#shop'},{name:'Feeling Hoodie',type:'hoodie',href:'#shop'},{name:'Motion Tee',type:'tee',href:'#shop'},{name:'SS26 Lookbook',type:'ss26',href:'#lookbook'}];
-$('#site-search')?.addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();const box=$('.search-results');if(!q){box.textContent='Try “hoodie”, “tee”, or “SS26”.';return}const results=searchIndex.filter(x=>`${x.name} ${x.type}`.toLowerCase().includes(q));box.innerHTML=results.length?results.map(x=>`<a href="${x.href}" class="search-result-link">${x.name} ↗</a>`).join(' &nbsp; / &nbsp; '):'No results. Try another search.';$$('.search-result-link',box).forEach(a=>a.addEventListener('click',closePanels))});
+const searchIndex=[{name:'Core Logo Hoodie',type:'hoodie',href:'#shop'},{name:'Feeling Hoodie',type:'hoodie',href:'#shop'}];
+$('#site-search')?.addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();const box=$('.search-results');if(!q){box.textContent='Try “hoodie”.';return}const results=searchIndex.filter(x=>`${x.name} ${x.type}`.toLowerCase().includes(q));box.innerHTML=results.length?results.map(x=>`<a href="${x.href}" class="search-result-link">${x.name} ↗</a>`).join(' &nbsp; / &nbsp; '):'No results. Try another search.';$$('.search-result-link',box).forEach(a=>a.addEventListener('click',closePanels))});
 
 $('#newsletter-form')?.addEventListener('submit',e=>{e.preventDefault();const email=$('#email');if(!email.value)return;flashToast('You’re on the list');e.currentTarget.reset()});
-
 $('.checkout-button')?.addEventListener('click',()=>flashToast('Checkout integration ready to connect'));
-
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('in-view')}),{threshold:.12});$$('.product-card,.section-heading,.lookbook-copy,.quote-section p,.about-body,.newsletter h2').forEach(el=>observer.observe(el));
