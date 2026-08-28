@@ -1,1 +1,197 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vibrant Studios</title></head><body><div id="app"></div><script src="/script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Vibrant Studios — streetwear rooted in movement, self-expression, and individuality." />
+  <title>Vibrant Studios — More Than A Feeling</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="announcement">
+    <div class="ticker" aria-label="Brand announcement">
+      <span>VIBRANT STUDIOS — SS26</span><span>FREE US SHIPPING OVER $150</span><span>MORE THAN A FEELING</span><span>VIBRANT STUDIOS — SS26</span><span>FREE US SHIPPING OVER $150</span><span>MORE THAN A FEELING</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Vibrant Studios home">VIBRANT<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#shop">Shop</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#about">Studio</a>
+    </nav>
+    <div class="header-actions">
+      <button class="text-button search-trigger" type="button">Search</button>
+      <button class="cart-trigger" type="button" aria-label="Open cart">Bag <span class="cart-count">0</span></button>
+      <button class="menu-trigger" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">VIBRANT STUDIOS / ORLANDO, FL</p>
+        <h1>MORE<br>THAN A<br><em>FEELING.</em></h1>
+        <p class="hero-note">Uniforms for people who move different. Built around oversized silhouettes, monochrome staples, and graphics that hit loud.</p>
+        <a class="lime-button" href="#shop">Shop SS26 <span>↘</span></a>
+        <div class="hero-index">DROP 001 / 2026</div>
+      </div>
+      <div class="hero-visual">
+        <img src="/assets/vibrant-back-graphic.jpg" alt="Vibrant Studios black hoodie with back graphic" />
+        <div class="image-tag">01 / MORE THAN A FEELING</div>
+      </div>
+    </section>
+
+    <section class="manifesto-band" aria-label="Brand statement">
+      <div class="manifesto-word">VIBRANT</div>
+      <div class="manifesto-copy">LIGHT IN MOTION<br>SELF EXPRESSION<br>ORLANDO — 2026</div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">NEW ARRIVALS / DROP 001</p>
+          <h2>Built to be<br>worn your way.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Product filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="tops">Tops</button>
+          <button class="filter" data-filter="hoodies">Hoodies</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="tops">
+          <a class="product-image-wrap" href="#" data-product="Studio Tee">
+            <img src="/assets/vibrant-tee.jpg" alt="Vibrant Studios washed black tee" />
+            <span class="product-badge">NEW</span>
+          </a>
+          <div class="product-meta">
+            <div><h3>Studio Tee</h3><p>Washed Black</p></div>
+            <strong>$48</strong>
+          </div>
+          <button class="quick-add" type="button" data-name="Studio Tee" data-price="48">Quick add <span>+</span></button>
+        </article>
+
+        <article class="product-card" data-category="hoodies">
+          <a class="product-image-wrap" href="#" data-product="Core Logo Hoodie">
+            <img src="/assets/vibrant-logo-hoodie.jpg" alt="Vibrant Studios core logo hoodie" />
+            <span class="product-badge dark-badge">CORE</span>
+          </a>
+          <div class="product-meta">
+            <div><h3>Core Logo Hoodie</h3><p>Black / Bone</p></div>
+            <strong>$92</strong>
+          </div>
+          <button class="quick-add" type="button" data-name="Core Logo Hoodie" data-price="92">Quick add <span>+</span></button>
+        </article>
+
+        <article class="product-card wide" data-category="hoodies">
+          <a class="product-image-wrap" href="#" data-product="Feeling Hoodie">
+            <img src="/assets/vibrant-back-graphic.jpg" alt="Vibrant Studios More Than A Feeling hoodie" />
+            <span class="product-badge">LIMITED</span>
+          </a>
+          <div class="product-meta">
+            <div><h3>Feeling Hoodie</h3><p>Black / Graphite / Acid</p></div>
+            <strong>$110</strong>
+          </div>
+          <button class="quick-add" type="button" data-name="Feeling Hoodie" data-price="110">Quick add <span>+</span></button>
+        </article>
+
+        <article class="product-card" data-category="tops">
+          <a class="product-image-wrap" href="#" data-product="Motion Tee">
+            <img src="/assets/vibrant-lookbook.jpg" alt="Vibrant Studios SS26 lookbook" />
+            <span class="product-badge dark-badge">SS26</span>
+          </a>
+          <div class="product-meta">
+            <div><h3>Motion Tee</h3><p>Off White</p></div>
+            <strong>$52</strong>
+          </div>
+          <button class="quick-add" type="button" data-name="Motion Tee" data-price="52">Quick add <span>+</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="split-story" id="lookbook">
+      <div class="lookbook-image">
+        <img src="/assets/vibrant-lookbook.jpg" alt="Vibrant Studios SS26 campaign lookbook" />
+      </div>
+      <div class="lookbook-copy">
+        <p class="eyebrow">SS26 LOOKBOOK</p>
+        <div class="number-mark">001</div>
+        <h2>LIGHT<br>IN MOTION.</h2>
+        <p>Vibrant Studios is a creative label rooted in movement, light, and self-expression. Every piece is designed for the person building their own lane.</p>
+        <a href="#shop" class="underlined-link">Explore the collection <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <p>WE DON'T MAKE BASICS<br>TO <span>BLEND IN.</span></p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-kicker">V / VIBRANT STUDIOS</div>
+      <div class="about-body">
+        <h2>Designed in Orlando.<br>Made for everywhere.</h2>
+        <p>Vibrant is streetwear with tension: clean forms, oversized energy, sharp graphics, and just enough color to break the uniform. Nothing overworked. Nothing accidental.</p>
+      </div>
+      <div class="about-stamp">EST.<br>2026</div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow dark">PRIVATE ACCESS</p>
+      <h2>GET THE NEXT<br>DROP FIRST.</h2>
+      <form id="newsletter-form">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" type="email" required placeholder="EMAIL ADDRESS" />
+        <button type="submit" aria-label="Join email list">↗</button>
+      </form>
+      <p class="form-note">Drop alerts, studio notes, and members-only access. No spam.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-logo" href="#top">VIBRANT.</a>
+    <div class="footer-grid">
+      <div><p>SHOP</p><a href="#shop">New arrivals</a><a href="#shop">Tops</a><a href="#shop">Hoodies</a></div>
+      <div><p>INFO</p><a href="#about">About</a><a href="#">Shipping + Returns</a><a href="#">Contact</a></div>
+      <div><p>FOLLOW</p><a href="#">Instagram</a><a href="#">TikTok</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 VIBRANT STUDIOS</span><span>ORLANDO, FL</span><span>MORE THAN A FEELING™</span></div>
+  </footer>
+
+  <aside class="cart-drawer" aria-hidden="true" aria-label="Shopping bag">
+    <div class="cart-head"><strong>YOUR BAG</strong><button class="cart-close" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-items"><p class="empty-cart">Your bag is empty.</p></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>SUBTOTAL</span><strong>$0.00</strong></div>
+      <button type="button" class="checkout-button">CHECKOUT <span>↗</span></button>
+      <small>Taxes and shipping calculated at checkout.</small>
+    </div>
+  </aside>
+  <div class="overlay" hidden></div>
+
+  <div class="search-panel" aria-hidden="true">
+    <button class="search-close" type="button" aria-label="Close search">×</button>
+    <p>SEARCH VIBRANT</p>
+    <label class="sr-only" for="site-search">Search products</label>
+    <input id="site-search" autocomplete="off" placeholder="TYPE TO SEARCH" />
+    <div class="search-results">Try “hoodie”, “tee”, or “SS26”.</div>
+  </div>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <button class="mobile-close" type="button" aria-label="Close menu">×</button>
+    <a href="#shop">Shop <span>01</span></a>
+    <a href="#lookbook">Lookbook <span>02</span></a>
+    <a href="#about">Studio <span>03</span></a>
+    <div class="mobile-menu-footer">VIBRANT STUDIOS<br>ORLANDO, FL / 2026</div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite">Added to bag</div>
+  <script src="/script.js"></script>
+</body>
+</html>
