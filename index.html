@@ -18,7 +18,6 @@
     <a class="brand" href="#top" aria-label="Vibrant Studios home">VIBRANT<span>.</span></a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="#shop">Shop</a>
-      <a href="#lookbook">Lookbook</a>
       <a href="#about">About</a>
     </nav>
     <div class="header-actions">
@@ -44,22 +43,9 @@
           <p class="eyebrow">DROP 001</p>
           <h2>New arrivals</h2>
         </div>
-        <div class="filters" role="group" aria-label="Product filters">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="tops">Tops</button>
-          <button class="filter" data-filter="hoodies">Hoodies</button>
-        </div>
       </div>
 
-      <div class="product-grid">
-        <article class="product-card" data-category="tops">
-          <a class="product-image-wrap" href="#" data-product="Studio Tee">
-            <img src="/assets/vibrant-tee.svg" alt="Vibrant Studios washed black tee" />
-          </a>
-          <div class="product-meta"><div><h3>Studio Tee</h3><p>Washed Black</p></div><strong>$48</strong></div>
-          <button class="quick-add" type="button" data-name="Studio Tee" data-price="48">Add to bag <span>+</span></button>
-        </article>
-
+      <div class="product-grid" style="grid-template-columns:repeat(2,minmax(0,1fr));max-width:980px;">
         <article class="product-card" data-category="hoodies">
           <a class="product-image-wrap" href="#" data-product="Core Logo Hoodie">
             <img src="/assets/vibrant-logo-hoodie.svg" alt="Vibrant Studios core logo hoodie" />
@@ -75,24 +61,6 @@
           <div class="product-meta"><div><h3>Feeling Hoodie</h3><p>Black / Graphic</p></div><strong>$110</strong></div>
           <button class="quick-add" type="button" data-name="Feeling Hoodie" data-price="110">Add to bag <span>+</span></button>
         </article>
-
-        <article class="product-card" data-category="tops">
-          <a class="product-image-wrap" href="#" data-product="Motion Tee">
-            <img src="/assets/vibrant-lookbook.svg" alt="Vibrant Studios SS26 lookbook" />
-          </a>
-          <div class="product-meta"><div><h3>Motion Tee</h3><p>Off White</p></div><strong>$52</strong></div>
-          <button class="quick-add" type="button" data-name="Motion Tee" data-price="52">Add to bag <span>+</span></button>
-        </article>
-      </div>
-    </section>
-
-    <section class="lookbook" id="lookbook">
-      <img src="/assets/vibrant-lookbook.svg" alt="Vibrant Studios SS26 lookbook" />
-      <div class="lookbook-copy">
-        <p class="eyebrow">SS26 LOOKBOOK</p>
-        <h2>Light in motion.</h2>
-        <p>Clean silhouettes, oversized proportions and expressive graphics. Designed in Orlando for wherever you move next.</p>
-        <a href="#shop">View collection <span>↗</span></a>
       </div>
     </section>
 
@@ -120,7 +88,7 @@
   <footer>
     <a class="footer-logo" href="#top">VIBRANT<span>.</span></a>
     <div class="footer-links">
-      <a href="#shop">Shop</a><a href="#lookbook">Lookbook</a><a href="#about">About</a><a href="#">Instagram</a>
+      <a href="#shop">Shop</a><a href="#about">About</a><a href="#">Instagram</a>
     </div>
     <p>© 2026 Vibrant Studios / Orlando, FL</p>
   </footer>
@@ -140,13 +108,12 @@
     <button class="search-close" type="button">×</button>
     <label class="sr-only" for="site-search">Search products</label>
     <input id="site-search" autocomplete="off" placeholder="Search" />
-    <div class="search-results">Try “hoodie”, “tee”, or “SS26”.</div>
+    <div class="search-results">Try “hoodie”.</div>
   </div>
 
   <div class="mobile-menu" aria-hidden="true">
     <button class="mobile-close" type="button">×</button>
     <a href="#shop">Shop</a>
-    <a href="#lookbook">Lookbook</a>
     <a href="#about">About</a>
   </div>
 
